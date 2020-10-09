@@ -8,8 +8,8 @@ header {
 	color: white;
 	text-align: center;
 	margin: 0 auto;
-	width: 1000px;
-	height: 100px;
+	width: 80%;
+	height: 20%;
 	line-height: 60px;
 	font-size: 1rem;
 }
@@ -20,12 +20,16 @@ footer {
 	color: white;
 	text-align: center;
 	margin: 0 auto;
-	width: 1000px;
-	height: 100px;
+	width: 80%;
+	height: 20%;
 	line-height: 60px;
 	font-size: 1rem;
 	clear: both;
 
+}
+
+main {
+	height: 800px;
 }
 
 article{
@@ -33,7 +37,8 @@ article{
 	color: white;
 	text-align: center;
 	margin: auto;
-
+	flex-grow: 1;
+	
 }
 
 main, section, aside, .bottom {
@@ -41,54 +46,61 @@ main, section, aside, .bottom {
 	margin: 0 auto;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	
+	align-items: stretch;
+	flex-grow: 1;
 }
 
 main, .bottom {
-	
-	width: 1000px;
+	width: 80%;
 	flex-direction: row;
 }
 
-section, aside {
+.bottom{
+	height:30%;
+}
+
+.first, aside {
+	height:70%;
 	flex-direction: column;
+
+}
+.first {
+	flex-grow: 2;
 }
 
 aside article:first-child {
 	background-color: rgb(202, 109, 202);	
-	height: 300px;
-	width: 300px;
-
+	width:100%;
 }
 
 aside article:nth-child(2) {
+	width:100%;
 	background-color: lightgreen;	
-	height: 300px;
-	width: 300px;
+
 }
 
 .first article:first-child {
+	width:100%;
 	background-color: orange;	
-	height: 300px;
-	width: 700px;
 
 }
 
 .first article:nth-child(2) {
+	width:100%;
 	background-color: darkgrey;	
-	height: 300px;
-	width: 700px;
+
 }
 
 .bottom article:first-child {
+	height: 100%;
 	background-color: green;	
-	height: 100px;
-	width: 700px;
+	flex-grow: 2;
+
 
 }
 
 .bottom article:nth-child(2) {
-	background-color: pink;	
-	height: 100px;
-	width: 300px;}
+	height: 100%;
+	background-color: pink;
+}
 	
